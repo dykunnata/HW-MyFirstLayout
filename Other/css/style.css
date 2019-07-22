@@ -3,13 +3,15 @@ body {
     background-color: whitesmoke;
 }
 img {
-    height: 700px;
-    margin-top: -60px;
-    padding: 0;
-    position: relative;
-   
-}
 
+}
+.me {
+height: 700px;
+margin-top: -60px;
+padding: 0;
+position: relative;
+
+}
 .flower-1 {
     content: url(../images/flower.png);
     width: 60px;
@@ -155,6 +157,7 @@ ul {
     border-radius: 8px;
     -webkit-transition: width 2s; /* Safari prior 6.1 */
     transition: width 2s;
+    z-index: 2;
   }
 
   .rectangle:hover {
@@ -252,8 +255,7 @@ a:link {
   }
 
 .left {
-    margin-top: 10px;
-    width: calc(100% - 100px);
+
 }
 
 .hamburgermenu {
@@ -269,9 +271,8 @@ a:link {
 }
 
 .logo {
-   margin-left: 1100px;
-   margin-top: 50px;
-   padding-top: 20px;
+text-align: right;
+
 }
 
 .aboutme {
@@ -517,7 +518,7 @@ a:link {
     text-align: center;
     position: relative;
     margin-bottom: 80px;
-    margin-top: -80px;
+    padding-top: 50px;
     font-family: 'Muli', sans-serif;
 }
 
@@ -525,15 +526,13 @@ a:link {
 .grid {
     display: grid;
     align-content: center;
-    grid-template-rows:1fr 1fr;
-    grid-template-columns:1fr 1fr;
-    height: 800px;
-    width: 800px;
-    grid-gap: 60px;
-    grid-template-areas:
-    "work1 work2"
-    "work3 work4"
-    ;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    width: calc(100% - 53px);
+    grid-gap: 100px;
+    margin-left: 50px;
+    grid-template-areas: "work1 work2" "work3 work4";
   }
   .work1 {
    grid-area: work1;
@@ -554,7 +553,10 @@ a:link {
   }
 
   .spacing {
-    margin-left: 150px;
+
+  }
+  .flip-card img {
+      width: 100%;
   }
 
   /* .website {
@@ -579,7 +581,7 @@ a:link {
   @media screen and (orientation: portrait) {
     .grid {
       display: grid;
-      grid-template-rows:1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows:1fr 1fr 1fr 1fr;
       grid-template-columns:1fr;
       grid-template-areas:
       "work1"
@@ -594,8 +596,7 @@ a:link {
 
   .flip-card {
     background-color: transparent;
-    width: 400px;
-    height: 250px;
+    height: 240px;
     border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
@@ -603,8 +604,8 @@ a:link {
   /* This container is needed to position the front and back side */
   .flip-card-inner {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
@@ -631,8 +632,9 @@ a:link {
   
   /* Style the back side */
   .flip-card-back {
-    background-color: #F07474;
-    margin-top: 20px;
+    background-color: #467640;
+    border-radius: 30px;
+    padding-top: 40px;
     color: white;
     transform: rotateY(180deg);
   }
